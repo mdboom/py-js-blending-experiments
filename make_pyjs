@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+${PYJS_PATH}/bin/pyjsbuild test_pyjs.py

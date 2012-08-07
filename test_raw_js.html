@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="transform.js" type="text/javascript"></script>
+<script type="text/javascript">
+function timeit() {
+    console.time("transform timer - raw JS");
+
+    var result = transform();
+
+    console.timeEnd("transform timer - raw JS");
+    console.log('Result: ' + result);
+}
+</script>
+</head>
+<body>
+<form>
+<button onclick="timeit()" type="button">Run</button>
+</form>
+</body>
+</html>

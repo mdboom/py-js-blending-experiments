@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+import json
+
+# Create the skulpt template
+with open("skulpt.html", 'r') as fd:
+    template = fd.read()
+
+with open("transform.py", 'r') as fd:
+    python_code = fd.read()
+
+python_code = python_code.replace('xrange', 'range')
+
+template = template.replace('[[[]]]', json.dumps(python_code))
+
+with open("test_skulpt.html", 'w') as fd:
+    fd.write(template)

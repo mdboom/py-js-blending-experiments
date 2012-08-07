@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+gcc -fPIC -std=c99 `pkg-config --cflags python` transform_wrap.c -shared -o ctransform.so
